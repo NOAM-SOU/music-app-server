@@ -1,0 +1,62 @@
+POST http://localhost:5001/users/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "andrea",
+    "password": "1234"
+}
+
+###
+POST http://localhost:5001/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "villa",
+    "password": "1111"
+}
+
+###
+POST http://localhost:5001/playlist/newplaylist HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjJhMzNhODRkY2Q3OTM3ODMzODgyMTQiLCJ1c2VybmFtZSI6InZpbGxhIiwicGFzc3dvcmQiOiIkMmIkMTAkWlhaRDZub1dZUkk5QkVmLnlJSVVmZWZlN0R1dWRHUmhxWWpGSGJEWDRUd1kxNzFhRjg5STYiLCJwbGF5bGlzdHMiOltdLCJmYXZvcml0ZVNvbmdzIjpbXSwiY3JlYXRlZEF0IjoiMjAyMi0wMy0xMFQxNzoyMTo0NC40MzJaIiwidXBkYXRlZEF0IjoiMjAyMi0wMy0xMFQxNzoyMTo0NC40MzJaIiwiX192IjowfQ.d4tu2CMUwyzFaLHDJPJr5yXWa8SzcxR_0RJyECx1VYw
+
+
+{
+
+    "playlistName": "My Songs"
+   
+}
+
+
+###
+POST http://localhost:5001/songs/addtofavorite HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjJhMzNhODRkY2Q3OTM3ODMzODgyMTQiLCJ1c2VybmFtZSI6InZpbGxhIiwicGFzc3dvcmQiOiIkMmIkMTAkWlhaRDZub1dZUkk5QkVmLnlJSVVmZWZlN0R1dWRHUmhxWWpGSGJEWDRUd1kxNzFhRjg5STYiLCJwbGF5bGlzdHMiOltdLCJmYXZvcml0ZVNvbmdzIjpbXSwiY3JlYXRlZEF0IjoiMjAyMi0wMy0xMFQxNzoyMTo0NC40MzJaIiwidXBkYXRlZEF0IjoiMjAyMi0wMy0xMFQxNzoyMTo0NC40MzJaIiwiX192IjowfQ.d4tu2CMUwyzFaLHDJPJr5yXWa8SzcxR_0RJyECx1VYw
+
+{
+    "title": "Mueka, Cosculluela - DM (Video Oficial)",
+     "src": "s6o8QKzZYMI&list=RDs6o8QKzZYMI&start_radio=1",
+   "provider": "Youtube",
+   "img": "https://is2-ssl.mzstatic.com/image/thumb/Music117/v4/0c/ef/f5/0ceff5f3-4bbd-4402-6863-0c0103de4346/191773105419.jpg/375x375bb.jpg"
+}
+
+
+###
+
+GET  http://localhost:5001/playlist HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjJhMzNhODRkY2Q3OTM3ODMzODgyMTQiLCJ1c2VybmFtZSI6InZpbGxhIiwicGFzc3dvcmQiOiIkMmIkMTAkWlhaRDZub1dZUkk5QkVmLnlJSVVmZWZlN0R1dWRHUmhxWWpGSGJEWDRUd1kxNzFhRjg5STYiLCJwbGF5bGlzdHMiOltdLCJmYXZvcml0ZVNvbmdzIjpbXSwiY3JlYXRlZEF0IjoiMjAyMi0wMy0xMFQxNzoyMTo0NC40MzJaIiwidXBkYXRlZEF0IjoiMjAyMi0wMy0xMFQxNzoyMTo0NC40MzJaIiwiX192IjowfQ.d4tu2CMUwyzFaLHDJPJr5yXWa8SzcxR_0RJyECx1VYw
+
+###
+
+GET  http://localhost:5001/songs/getfavorite HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjJhMzNhODRkY2Q3OTM3ODMzODgyMTQiLCJ1c2VybmFtZSI6InZpbGxhIiwicGFzc3dvcmQiOiIkMmIkMTAkWlhaRDZub1dZUkk5QkVmLnlJSVVmZWZlN0R1dWRHUmhxWWpGSGJEWDRUd1kxNzFhRjg5STYiLCJwbGF5bGlzdHMiOltdLCJmYXZvcml0ZVNvbmdzIjpbXSwiY3JlYXRlZEF0IjoiMjAyMi0wMy0xMFQxNzoyMTo0NC40MzJaIiwidXBkYXRlZEF0IjoiMjAyMi0wMy0xMFQxNzoyMTo0NC40MzJaIiwiX192IjowfQ.d4tu2CMUwyzFaLHDJPJr5yXWa8SzcxR_0RJyECx1VYw
+###
+GET  http://localhost:5001/playlist/getplaylists/62043711881b2adca6b6e215 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer 
+
+
+###
+GET http://localhost:5000/search/api/mp3 HTTP/1.1
